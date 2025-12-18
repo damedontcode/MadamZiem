@@ -1,0 +1,435 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #000000; /* Black background requirement */
+    color: #e0e0e0; /* Light text for contrast */
+    line-height: 1.6;
+}
+
+/* Apply Lora Italic to all headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 0.5px; /* Slight spacing looks elegant on italics */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: rgba(20, 20, 20, 0.4);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #333;
+}
+
+/* Update the main logo container to align items */
+.logo {
+    display: flex;
+    align-items: center; /* Ensures text and image are vertically centered */
+    gap: 15px; /* Adds space between the image and the text */
+    
+    /* Keep your existing font settings for the text */
+    font-family: 'Monsieur La Doulaise', cursive;
+    font-size: 2.5rem; 
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Control the size of the image itself */
+.nav-logo-img {
+    height: 50px; /* CHANGE THIS NUMBER to resize the logo */
+    width: auto;  /* Keeps the aspect ratio correct so it doesn't squish */
+    object-fit: contain;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+/* Add this block to apply the font to the links */
+.nav-links a {
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    
+    /* Standard link styling */
+    text-decoration: none;
+    color: inherit; /* Keeps the white color */
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #aaa;
+}
+
+.hero-section {
+    height: 100vh; /* Fills 100% of the screen height */
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden; /* Ensures images don't spill out */
+    border-bottom: 1px solid #333;
+}
+
+/* Ensure content sits ON TOP of the images */
+.hero-content {
+    position: relative;
+    z-index: 2; /* Puts text above the background */
+    text-shadow: 0 2px 5px rgba(0,0,0,0.7); /* Adds shadow for readability */
+}
+
+/* Add this NEW block right after your .hero-content block */
+.hero-content h1 {
+    /* clamp(minimum, preferred, maximum) */
+    font-size: clamp(2rem, 5vw, 4.5rem); 
+    margin-bottom: 10px;
+    
+    /* Optional: Since you use Lora Italic elsewhere, 
+       you might want to ensure this title matches or stays unique */
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.hero-content p {
+    /* Minimum 1rem, Preferred 2vw, Maximum 1.5rem */
+    font-size: clamp(1rem, 2vw, 1.5rem); 
+    margin-bottom: 25px;
+}
+
+/* Neutral Low Opacity Buttons */
+.btn-neutral {
+    background-color: rgba(255, 255, 255, 0.15); /* Low opacity neutral */
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 10px 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    margin-top: 15px;
+}
+
+.btn-neutral:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-color: #fff;
+}
+
+/* Destinations - Vertical Grid */
+main {
+    padding: 60px 5%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    border-bottom: 2px solid #333;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.location-grid {
+    display: flex;
+    flex-direction: column; /* Vertical alignment */
+    gap: 30px;
+}
+
+.location-card {
+    background-color: #111;
+    border: 1px solid #333;
+    padding: 40px;
+    text-align: center;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.location-card:hover {
+    transform: translateY(-5px);
+    border-color: #555;
+}
+
+/* Contact Form Section */
+.contact-section {
+    padding: 60px 5%;
+    background-color: #0a0a0a;
+    text-align: center;
+    border-top: 1px solid #333;
+}
+
+#enquiryForm {
+    max-width: 500px;
+    margin: 30px auto;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #ccc;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #777;
+}
+
+.submit-btn {
+    width: 100%;
+}
+
+/* Footer */
+footer {
+    background-color: #050505;
+    padding: 40px 5%;
+    text-align: center;
+    border-top: 1px solid #333;
+}
+
+.social-links {
+    margin: 20px 0;
+}
+
+.social-links a {
+    margin: 0 15px;
+    color: #888;
+    font-size: 1.5rem; /* Increased size for icons */
+    transition: color 0.3s ease, transform 0.3s ease; /* Added transform for pop effect */
+    display: inline-block; /* Required for transform to work */
+}
+
+.social-links a:hover {
+    color: #fff;
+    transform: translateY(-3px); /* Little hop up on hover */
+}
+
+/* Destinations - GRID UPDATE */
+.location-grid {
+    display: grid; /* Use Grid instead of Flex */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 3 columns side-by-side */
+    gap: 30px;
+    align-items: start;
+}
+
+.location-card {
+    background-color: #111;
+    border: 1px solid #333;
+    padding: 0; /* Remove padding so image fits edges */
+    text-align: center;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+    overflow: hidden; /* Keeps image inside rounded corners */
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ensures all cards are same height */
+}
+
+/* Image Styling */
+.destination-img {
+    width: 100%;
+    height: 200px; /* Fixed height for uniformity */
+    object-fit: cover; /* Crops image nicely without stretching */
+    border-bottom: 1px solid #333;
+}
+
+.location-card h3 {
+    margin-top: 20px;
+}
+
+.location-card p {
+    padding: 0 20px;
+    flex-grow: 1; /* Pushes button to bottom */
+}
+
+.location-card button {
+    margin: 20px;
+}
+
+/* ... (Contact form styles remain same) ... */
+
+/* MODAL STYLES (Popup) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; 
+    z-index: 2000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #111;
+    margin: auto;
+    padding: 30px;
+    border: 1px solid #444;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 8px;
+    position: relative;
+    color: #e0e0e0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    animation: fadeIn 0.4s;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #fff;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(-20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* --- BACKGROUND SLIDESHOW STYLES --- */
+.cb-slideshow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Puts images behind text */
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.cb-slideshow li span {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: transparent;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 18s linear infinite; /* Cycle duration */
+}
+
+/* Define your 3 Images Here */
+.cb-slideshow li:nth-child(1) span { 
+    background-image: url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1920&q=80'); 
+}
+.cb-slideshow li:nth-child(2) span { 
+    background-image: url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1920&q=80'); 
+    animation-delay: 6s; /* Delays start so they don't overlap */
+}
+.cb-slideshow li:nth-child(3) span { 
+    background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80'); 
+    animation-delay: 12s;
+}
+
+/* Animation Keyframes (Fade and Zoom effect) */
+@keyframes imageAnimation { 
+    0% { 
+        opacity: 0; 
+        animation-timing-function: ease-in;
+    }
+    10% { opacity: 1; }  /* Fade in quickly */
+    30% { transform: scale(1.05); } /* Gentle zoom (scrolling effect) */
+    40% { opacity: 1; } 
+    50% { 
+        opacity: 0;      /* Fade out */
+        transform: scale(1.1); 
+    }
+    100% { opacity: 0; }
+}
+
+/* Add a dark overlay so text is always readable */
+.cb-slideshow li::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4); /* 40% dark tint */
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+    
+    /* 1. Stack the Navbar */
+    .navbar {
+        flex-direction: column; /* Stacks logo on top of links */
+        gap: 20px;
+        padding: 15px;
+    }
+
+    .nav-links {
+        gap: 15px; /* Brings links closer together */
+        font-size: 0.9rem; /* Slightly smaller text */
+    }
+
+    /* 2. Adjust Hero Section */
+    .hero-content {
+        width: 90%; /* Stops text from hitting the edges */
+    }
+    
+    /* 3. Adjust Form Width */
+    #enquiryForm {
+        width: 100%; /* Form takes full width of the screen */
+        padding: 0 10px;
+    }
+    
+    /* 4. Fix Grid Alignment (Optional backup) */
+    /* Note: Your existing grid code uses 'auto-fit', so the 
+       destinations actually stack automatically! But this 
+       ensures they are centered. */
+    .location-grid {
+        justify-content: center;
+    }
+}
