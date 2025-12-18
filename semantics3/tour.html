@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madam Ziem's Travel and Tours</title>
+
+    <link rel="icon" href="logo.png" type="image/png">
+
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=block">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Monsieur+La+Doulaise&display=block" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/all.min.css">
+    
+    <link rel="stylesheet" href="tourstyle.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+        <img src="logo.png" alt="Madam Ziem Logo" class="nav-logo-img">  
+           <span>Madam Ziems Travel & Tours</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#destinations">Destinations</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header id="hero" class="hero-section">
+        <ul class="cb-slideshow">
+            <li><span>Image 01</span></li>
+            <li><span>Image 02</span></li>
+            <li><span>Image 03</span></li>
+        </ul>
+
+        <div class="hero-content">
+            <h1>Experience the World in Style</h1>
+            <p>Exclusive tours to Paris, London, and Amsterdam.</p>
+            <a href="#contact">
+                <button class="btn-neutral">Book Now</button>
+            </a>
+        </div>
+    </header>
+
+    <main id="destinations">
+        <h2 class="section-title">Top Destinations</h2>
+        
+        <div class="location-grid">
+            <div class="location-card" data-city="paris">
+                <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=80" alt="Paris" class="destination-img">
+                <h3>Paris, France</h3>
+                <p>The city of lights and love. Experience the Eiffel Tower and world-class cuisine.</p>
+                <button class="btn-neutral view-more-btn">View Details</button>
+            </div>
+
+            <div class="location-card" data-city="london">
+                <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=800&q=80" alt="London" class="destination-img">
+                <h3>London, UK</h3>
+                <p>Explore historic landmarks, the British Museum, and modern city life.</p>
+                <button class="btn-neutral view-more-btn">View Details</button>
+            </div>
+
+            <div class="location-card" data-city="amsterdam">
+                <img src="C:\Users\Paa\Desktop\Bsc. Information Technology\semantics3\night-city-canal-city-lights-amsterdam-netherlands-11570170027a3thmkbk0q.jpg" alt="Amsterdam" class="destination-img">
+                <h3>Amsterdam, Netherlands</h3>
+                <p>Cruise the canals and discover the artistic heritage of the Dutch capital.</p>
+                <button class="btn-neutral view-more-btn">View Details</button>
+            </div>
+        </div>
+    </main>
+
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 id="modalTitle">City Name</h2>
+            <p id="modalDescription">Detailed information will appear here...</p>
+            <div id="modalExtraContent">
+                </div>
+        </div>
+    </div>
+
+    <section id="contact" class="contact-section">
+        <h2>Start Your Journey</h2>
+        <p>Enquire with us today.</p>
+        
+        <form id="enquiryForm">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required placeholder="Jane Smith">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required placeholder="jane@example.com">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required placeholder="+233(0) 123 456 789">
+            </div>
+
+            <button type="submit" class="btn-neutral submit-btn">Send Enquiry</button>
+        </form>
+    </section>
+
+    <footer>
+    <div class="footer-content">
+        <h3>Madam Ziem's Travel and Tours</h3>
+        <p>Connect with us on social media:</p>
+        
+        <div class="social-links">
+            <a href="#" aria-label="Facebook">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+
+            <a href="#" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="#" aria-label="Twitter">
+                <i class="fa-brands fa-x-twitter"></i>
+            </a>
+
+            <a href="#" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+        </div>
+        
+        <p>&copy; 2025 Madam Ziem's Travel and Tours. All rights reserved.</p>
+    </div>
+</footer>
+
+    <script src="tourscript.js"></script>
+</body>
+</html>
